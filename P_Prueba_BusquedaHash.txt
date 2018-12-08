@@ -26,4 +26,12 @@ class hash_table:
         else:
             print ("Se encontro el elemento en ")
             return id(self.table[hash])
-                  
+                
+
+H = hash_table()
+H.Insert("Ede")
+H.Insert("Oc")
+H.Insert("Bou")
+
+print (H.Search("Bou"))
+  
