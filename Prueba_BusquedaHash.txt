@@ -24,6 +24,25 @@ class HashCero{
 			arreglo[indiceArreglo] = elemento;
 		}
 	}
+	public String buscarClave(String elemento) {
+		int indiceArreglo = Integer.parseInt(elemento)%7;
+		int contador =0;
+		
+			while(arreglo[indiceArreglo] != "-1") {
+				if(arreglo[indiceArreglo] == elemento) {
+					System.out.println("El elemento " + elemento +
+							" Fue encontrado en la posicion " + indiceArreglo);
+					return arreglo[indiceArreglo];
+				}
+				indiceArreglo++;
+				indiceArreglo %= tamaño;
+				contador++;
+				if (contador > 7) {
+					break;
+				}
+			}
+			return null;
+	}
 
 }
 public class Prueba_BusquedaHash {
