@@ -7,6 +7,23 @@ class HashCero{
 		arreglo = new String[tam];
 		Arrays.fill(arreglo, "-1");
 	}
+	public void funcionHash(String[]cadenaArreglo, String[] arreglo) {
+		int i;
+		for (i=0; i<cadenaArreglo.length; i++) {
+			String elemento = cadenaArreglo[i];
+			int indiceArreglo = Integer.parseInt(elemento)%7;
+			System.out.println("El indice es: " + indiceArreglo + " para el elemento " + elemento);
+						//tratano las colisiones
+			
+			while(arreglo[indiceArreglo] != "-1") {
+				indiceArreglo++;
+				System.out.println("Ocurrio una Colision para el indice " + (indiceArreglo-1) +
+										" Cambiar el indice " + indiceArreglo);
+				indiceArreglo %= tamaño;
+			}
+			arreglo[indiceArreglo] = elemento;
+		}
+	}
 
 }
 public class Prueba_BusquedaHash {
