@@ -13,3 +13,9 @@ class hash_table:
         for i in range(0, len(value)):
             key += ord(value[i])
         return key % 127
+
+    def Insert(self, value):
+        hash = self.Hash_func(value)
+        if self.table[hash] is None:
+            self.table[hash] = value
+            
