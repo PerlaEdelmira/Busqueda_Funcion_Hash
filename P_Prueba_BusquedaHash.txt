@@ -1,0 +1,8 @@
+'''
+Created on Dec 4, 2018
+@author: ztudent 17
+'''
+class hash_table:
+    def __init__(self):
+        self.table = [None] * 127
+        
