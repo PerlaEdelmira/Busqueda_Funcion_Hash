@@ -1,4 +1,12 @@
 class HashCero{
+	//constructor
+	String [] arreglo;
+	int tamaño, contador;
+	public HashCero(int tam) {
+		tamaño = tam;
+		arreglo = new String[tam];
+		Arrays.fill(arreglo, "-1");
+	}
 
 }
 public class Prueba_BusquedaHash {
