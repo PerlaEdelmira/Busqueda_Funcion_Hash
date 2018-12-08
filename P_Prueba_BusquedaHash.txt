@@ -6,3 +6,10 @@ class hash_table:
     def __init__(self):
         self.table = [None] * 127
         
+
+   #Hash Funciona
+    def Hash_func(self, value):
+        key =0
+        for i in range(0, len(value)):
+            key += ord(value[i])
+        return key % 127
