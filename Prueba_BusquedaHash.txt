@@ -48,5 +48,14 @@ class HashCero{
 public class Prueba_BusquedaHash {
 	public static void main(String[] args) {
 
+		System.out.println("-------> Busqueda Hash"); 
+			HashCero hash = new HashCero(8);
+			String [] elementos = {"20", "34", "21","10", "100", "56", "12", "20", "34", "21","10", "100", "56", "12", "20", "34", "21","10", "100", "56", "12", "20", "34", "21","10", "100", "56", "12"};
+			hash.funcionHash(elementos, hash.arreglo);
+			hash.mostra();
+			String buscando = hash.buscarClave("34");
+		if(buscando == null) {
+			System.out.println("El elemento 34 no se encuentra en la tabla");
+		}
 	}
 }
