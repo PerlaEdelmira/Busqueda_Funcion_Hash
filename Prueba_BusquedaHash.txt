@@ -1,0 +1,8 @@
+class HashCero{
+
+}
+public class Prueba_BusquedaHash {
+	public static void main(String[] args) {
+
+	}
+}
