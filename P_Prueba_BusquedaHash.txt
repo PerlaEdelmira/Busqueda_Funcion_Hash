@@ -18,4 +18,12 @@ class hash_table:
         hash = self.Hash_func(value)
         if self.table[hash] is None:
             self.table[hash] = value
-            
+ 
+    def Search (self, value):
+        hash = self.Hash_func(value)
+        if self.table[hash] is None:
+            return None
+        else:
+            print ("Se encontro el elemento en ")
+            return id(self.table[hash])
+                  
